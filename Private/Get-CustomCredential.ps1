@@ -11,7 +11,7 @@ function Get-Credential {
         $username = $props.Username
         $credentialobject = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $username,$password
     } else {
-        Write-Error -Message "Credential Object does not exist, try running setup again (New-Credential)" -ErrorAction Stop
+        Write-Error -Message "Credential Object does not exist, try running setup again (New-CustomCredential)" -ErrorAction Stop
     }
     return $credentialobject.GetNetworkCredential()
 }
